@@ -19,7 +19,7 @@
 }
 
 .profile:hover .image {
-    transform: translate(-50px, -50px)
+    transform: translate(-40px, -50px)
 }
 
 .profile .content {
@@ -35,7 +35,8 @@
 }
 
 .profile:hover .content {
-    bottom: 8px
+    bottom: 8px;
+    right:8px
 }
 
 .profile .content span:nth-child(1) {

@@ -1,9 +1,12 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({service}) => {
   
-    const{img ,name } = service
+    const{id ,img ,name , title } = service
+    const url = `/appointed/${id}`
     
     return (
         <div>
@@ -13,8 +16,9 @@ const Service = ({service}) => {
                     <div className="shadow"></div>
                     <div className="card-title">{name}</div>
                     <div className="card-subtitle">
-                        <p> <small className="text-muted">We spent thousands of hours creating on algorithm that does this for you in seconds. We collect a small fee from the professional after they meet your</small> </p>
+                        <p> <small className="text-muted">{title}</small> </p>
                     </div>
+                    <Link to={url}><Button style={{backgroundColor:'#8dd1fe' , color:'dark' , border:'none'}}>Appointment</Button></Link>
                 </div>
             </div>
         </div>

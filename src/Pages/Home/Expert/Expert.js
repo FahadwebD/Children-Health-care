@@ -8,9 +8,9 @@ const Expert = ({expert}) => {
     return (
       
    <div className='container ms-4 mb-3'>
-        <div className="profile bg-info ">
+        <div  style={{backgroundColor:'#8dd1fe'}} className="profile ">
         <div className="image"> <img style={{height:300 , width:300}} src={img} alt=''/> </div>
-        <div className="content"> <span>{name}</span> <span>{chamber}</span> </div>
+        <div className="content "> <span>{name}</span> <span>{chamber}</span> </div>
     </div>
    </div>
 

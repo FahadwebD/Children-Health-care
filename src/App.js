@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter , Switch , Route } from 'react-router-dom';
 import './App.css';
+import Appointed from './Pages/Appointed/Appointed/Appointed';
 import Home from './Pages/Home/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 
@@ -20,6 +21,9 @@ function App() {
        <Home></Home>
 
      </Route>
+     <Route exact path='/appointed/:serviceId'>
+      <Appointed></Appointed>
+      </Route>
      <Route exact path='*'>
 
       <NotFound></NotFound>
