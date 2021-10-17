@@ -7,7 +7,9 @@ const Services = () => {
     const [services] = useServices([])
   
     return (
-        <div className='container mapGrid'>
+       <div className='mt-5'>
+           <h1 className='mb-5'>Our Services</h1>
+            <div className='container mapGrid'>
             
             {
                 services.map(service=> <Service
@@ -16,6 +18,7 @@ const Services = () => {
                 ></Service>)
             }
         </div>
+       </div>
     );
 };
 
