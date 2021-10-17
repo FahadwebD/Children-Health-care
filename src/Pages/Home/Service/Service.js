@@ -9,7 +9,7 @@ const Service = ({service}) => {
         <div>
             <div className="card">
             <div className="card-content">
-                <div class="card-body"> <img style={{height:100}}  className="img img-fluid" src={img} alt=''/>
+                <div className="card-body"> <img style={{height:100}}  className="img img-fluid" src={img} alt=''/>
                     <div className="shadow"></div>
                     <div className="card-title">{name}</div>
                     <div className="card-subtitle">
