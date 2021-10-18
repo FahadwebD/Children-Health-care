@@ -1,17 +1,20 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useForm from '../../hooks/useForm';
-import './Register.css'
-const Register = () => {
+import useAuth from '../../../hooks/useAuth';
+import useForm from '../../../hooks/useForm';
+import './Login.css'
+
+const Login = () => {
   const [ email ,
     password,
     emailChange,
     passChange,
     handleLoading] = useForm();
-    console.log(email , password)
+    
+    const {signInUsingGoogle} = useAuth()
     return (
         <div>
-                 <div>
             <div className="wrapper fadeInDown">
   <div id="formContent">
     
@@ -25,20 +28,21 @@ const Register = () => {
     <form onSubmit={handleLoading}>
       <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
       <input onChange={passChange} type="password" id="login" className="fadeIn third" name="login" placeholder="password"/>
-      <input  type="submit" className="fadeIn fourth" value="Register"/>
+      <input  type="submit" className="fadeIn fourth" value="Log In"/>
      
     </form>
 
-   
+    <div className='mb-2'>
+      <Button onClick={signInUsingGoogle} className='px-5 fadeIn fourth' style={{backgroundColor:'#58baed' , border:"none"}}>Google</Button>
+      </div>
     <div id="formFooter">
-      <Link className="underlineHover" to="/login">Already Have An Account?</Link>
+      <Link className="underlineHover" to="/register">Don't Have An Account?</Link>
     </div>
 
   </div>
 </div>
         </div>
-        </div>
     );
 };
 
-export default Register;
+export default Login;

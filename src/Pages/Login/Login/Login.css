@@ -68,7 +68,7 @@ a {
   
 
   
-  input[type=button]  {
+  input[type=submit]  {
     background-color: #56baed;
     border: none;
     color: white;
@@ -90,11 +90,11 @@ a {
     transition: all 0.3s ease-in-out;
   }
   
-  input[type=button]:hover {
+  input[type=submit]:hover {
     background-color: #39ace7;
   }
   
-  input[type=button]:active{
+  input[type=submit]:active {
     -moz-transform: scale(0.95);
     -webkit-transform: scale(0.95);
     -o-transform: scale(0.95);
