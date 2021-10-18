@@ -1,11 +1,11 @@
-.card {
+.cards {
     cursor: pointer
 }
 
 
 
-.card.hover,
-.card:hover {
+.cards.hover,
+.cards:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, .2)
 }
 

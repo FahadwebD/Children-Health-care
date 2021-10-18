@@ -13,7 +13,7 @@ const Experts = () => {
         <div className='container'>
             <br />
             <br />
-            <h2>Our Doctors</h2>
+            <h1>Our Doctors</h1>
             <br />
             <br />
             <div  className='container mapGridE mt-3 '>

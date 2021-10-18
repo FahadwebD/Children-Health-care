@@ -8,7 +8,7 @@ const AppointmentDetails = (props) => {
  
     return (
         <div className='container mb-3'>
-            <img src={img} alt="" />
+            <img className='img-fluid' src={img} alt="" />
             <div>
             <h1 style={{color:'dark'}}>{name}</h1>
             <p> <span style={{color:'red'}} >What is {name}</span>  {why}</p>
