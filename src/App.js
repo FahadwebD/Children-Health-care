@@ -5,6 +5,7 @@ import AuthProvider from './contexts/AuthProvider';
 import Appointed from './Pages/Appointed/Appointed/Appointed';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -28,9 +29,9 @@ function App() {
        <Home></Home>
 
      </Route>
-     <Route exact path='/appointed/:serviceId'>
+     <PrivateRoute exact path='/appointed/:serviceId'>
       <Appointed></Appointed>
-      </Route>
+      </PrivateRoute>
       <Route exact path ='/login'>
         <Login></Login>
       </Route>

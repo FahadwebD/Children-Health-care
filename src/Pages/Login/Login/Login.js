@@ -6,13 +6,10 @@ import useForm from '../../../hooks/useForm';
 import './Login.css'
 
 const Login = () => {
-  const [ email ,
-    password,
-    emailChange,
-    passChange,
-    handleLoading] = useForm();
+ 
     
-    const {signInUsingGoogle} = useAuth()
+    const { email ,password,emailChange,passChange,handleLoading,signInUsingGoogle} = useAuth()
+    console.log(email , password)
     return (
         <div>
             <div className="wrapper fadeInDown">
