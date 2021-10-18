@@ -60,7 +60,7 @@ const Covid = () => {
 </Accordion>
        </div>
        <div className='p-2 mt-4'>
-            <img style={{height:400 , width:380}} src="https://pngfile.net/download/Ot7EVvckNDNuYc6NG5Vt93ArNwKLUgTy0LS5A6p82h5DLMGMLcoNW00bdqmI5bTWm1y0NNLltsOH8pBcfHqtG34XVgU2bXrT4TtrIdoXT0Qx8tSOzaRqO6jndlnWy3twsZJm8SUOtvtwPOEm8G0QcGUd7gK1jhQifOOYYaWFeuuFwYH7zXC3V8kOQTiZhS2PpdgjkntS/large" alt="" />
+            <img style={{height:400 , width:300}} src="https://pngfile.net/download/Ot7EVvckNDNuYc6NG5Vt93ArNwKLUgTy0LS5A6p82h5DLMGMLcoNW00bdqmI5bTWm1y0NNLltsOH8pBcfHqtG34XVgU2bXrT4TtrIdoXT0Qx8tSOzaRqO6jndlnWy3twsZJm8SUOtvtwPOEm8G0QcGUd7gK1jhQifOOYYaWFeuuFwYH7zXC3V8kOQTiZhS2PpdgjkntS/large" alt="" />
 
        </div>
     </div>
