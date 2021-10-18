@@ -6,16 +6,7 @@ const useForm =()=>{
     const [password , setPassword] = useState('')
   
 
-    const handleLoading = e =>{
    
-        console.log(email , password)
-        // createUserWithEmailAndPassword(auth, email, password)
-        // .then (result =>{
-        //   const user= result.user
-        //   console.log(user)
-        // })
-        e.preventDefault()
-      }
       const emailChange = e =>{
     
         setEmail(e.target.value)
@@ -30,8 +21,7 @@ const useForm =()=>{
           email ,
           password,
           emailChange,
-          passChange,
-          handleLoading
+          passChange
       ]
 
 }

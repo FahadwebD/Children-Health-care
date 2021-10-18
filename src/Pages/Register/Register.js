@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import useForm from '../../hooks/useForm';
 import './Register.css'
 const Register = () => {
-  const [ email ,
-    password,
-    emailChange,
-    passChange,
-    handleLoading] = useForm();
-    console.log(email , password)
+  const { email ,password,emailChange,passChange,handleRegistration , error} = useAuth()
+  
     return (
         <div>
                  <div>
@@ -22,9 +19,10 @@ const Register = () => {
     </div>
 
   
-    <form onSubmit={handleLoading}>
+    <form onSubmit={handleRegistration}>
       <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
       <input onChange={passChange} type="password" id="login" className="fadeIn third" name="login" placeholder="password"/>
+      <div><small className='text-danger'>{error}</small></div>
       <input  type="submit" className="fadeIn fourth" value="Register"/>
      
     </form>

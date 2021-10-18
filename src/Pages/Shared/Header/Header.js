@@ -21,7 +21,7 @@ const Header = () => {
    {user?.email ?
    <Button onClick={logOut} style={{backgroundColor:'#58baed' , border:"none"}}>Logout</Button>:<Nav.Link as={Link} to="/login"><Button style={{backgroundColor:'#58baed' , border:"none"}}>Login</Button></Nav.Link>}
     
-    <Navbar.Text>Signed in as{user?.displayName }</Navbar.Text>
+    <Navbar.Text>Signed in as{user?.email }</Navbar.Text>
     </Container>
   </Navbar> 
         </>

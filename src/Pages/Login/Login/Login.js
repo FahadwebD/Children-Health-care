@@ -8,7 +8,7 @@ import './Login.css'
 const Login = () => {
  
     
-    const { email ,password,emailChange,passChange,handleLoading,signInUsingGoogle} = useAuth()
+    const { email ,password,emailChange,passChange,handleLogin,signInUsingGoogle} = useAuth()
     console.log(email , password)
     return (
         <div>
@@ -22,7 +22,7 @@ const Login = () => {
     </div>
 
   
-    <form onSubmit={handleLoading}>
+    <form  onSubmit={handleLogin}>
       <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
       <input onChange={passChange} type="password" id="login" className="fadeIn third" name="login" placeholder="password"/>
       <input  type="submit" className="fadeIn fourth" value="Log In"/>
