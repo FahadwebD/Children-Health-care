@@ -7,16 +7,12 @@ initializeAuthentication();
 const useFirebase = () =>{
     const [user , setUser] = useState({})
     const [isLoading , setIsLoadinng] = useState(true);
-    const [ email ,
-        password,
-        emailChange,
-        passChange] = useForm();
+    const [ email ,password,emailChange,passChange] = useForm();
+    const [error , setError] = useState('')
+    const auth = getAuth();
 
-        const [error , setError] = useState('')
-        const auth = getAuth();
-
-        const handleRegistration = e =>{
-            e.preventDefault();
+    const handleRegistration = e =>{
+         e.preventDefault();
             if(password.length<6){
                 setError('password must ve atleast 6 charecter long')
                 return;
@@ -40,9 +36,10 @@ const useFirebase = () =>{
             })
            
           } 
+
     
-          const handleLogin= e =>{
-            e.preventDefault();
+ const handleLogin= e =>{
+        e.preventDefault();
             signInWithEmailAndPassword(auth , email, password)
             .then (result =>{
               const user= result.user
@@ -55,7 +52,9 @@ const useFirebase = () =>{
 
         }
 
-    const signInUsingGoogle = () =>{
+
+
+const signInUsingGoogle = () =>{
         setIsLoadinng(true);
         const googleProvider = new GoogleAuthProvider();
 
@@ -64,7 +63,9 @@ const useFirebase = () =>{
         .finally(()=> setIsLoadinng(false));
     }
 
-    useEffect(()=>{
+
+
+useEffect(()=>{
      const unsubscribed = onAuthStateChanged(auth , user=>{
             if(user){
                 setUser(user);
@@ -78,6 +79,7 @@ const useFirebase = () =>{
 
     }, [])
 
+
     const logOut = () =>{
         setIsLoadinng(true);
         signOut(auth)
@@ -87,15 +89,17 @@ const useFirebase = () =>{
         .finally(()=> setIsLoadinng(false));
     }
 
+
+
     return {
         user,
         email ,
         password,
         emailChange,
         passChange,
+        error,
         handleRegistration,
         handleLogin,
-        error,
         signInUsingGoogle,
         logOut, 
         isLoading
