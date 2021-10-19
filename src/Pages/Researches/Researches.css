@@ -74,12 +74,13 @@ body {
 
 #img-k {
     float: right;
+    height: 60%;
 }
 
 
 @media (max-width: 450px) {
     .boxs {
-        height: 200px;
+        height: 220px;
     }
 }
 

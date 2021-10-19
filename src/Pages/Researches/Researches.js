@@ -26,10 +26,10 @@ We got ANISA during 2010 which is one of the biggest projects in our history. Si
     
   </div>
   <div className="row1-container">
-    <div className="boxs box-down green">
+    <div className="boxs box-down green ">
       
       <p>240+ clinical trials, 400+ publications and 470+ research and educational presentations last year</p>
-      <img id='img-k' className='img-fluid' src="https://icons555.com/images/icons-green/image_icon_dna_helix_pic_512x512.png" alt=""/>
+      <img id='img-k'  className='img-fluid' src="https://icons555.com/images/icons-green/image_icon_dna_helix_pic_512x512.png" alt=""/>
     </div>
 
     <div className="boxs red">
