@@ -1,4 +1,4 @@
-import {getAuth , createUserWithEmailAndPassword, signInWithEmailAndPassword ,signInWithPopup , GoogleAuthProvider , signOut , onAuthStateChanged} from "firebase/auth";
+import {getAuth , updateProfile, createUserWithEmailAndPassword, signInWithEmailAndPassword ,signInWithPopup , GoogleAuthProvider , signOut , onAuthStateChanged} from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 import useForm from "./useForm";
@@ -8,6 +8,7 @@ const useFirebase = () =>{
     const [user , setUser] = useState({})
     const [isLoading , setIsLoadinng] = useState(true);
     const [ email ,password,emailChange,passChange] = useForm();
+    const [profileName , setProfileName] = useState('');
     const [error , setError] = useState('')
     const auth = getAuth();
 
@@ -28,8 +29,11 @@ const useFirebase = () =>{
             createUserWithEmailAndPassword(auth, email, password)
             .then (result =>{
               const user= result.user
-              console.log(user);
-              setError('')
+              setUser(user);
+              setUserName();
+              setError('');
+              window.location.reload()
+              
             })
             .catch(error => {
                 setError(error.message);
@@ -37,6 +41,14 @@ const useFirebase = () =>{
            
           } 
 
+          const setUserName = () =>{
+
+            updateProfile(auth.currentUser , {displayName: profileName})
+            .then(result=>{
+                setUser(auth.currentUser)
+            })
+
+          }
     
  const handleLogin= e =>{
         e.preventDefault();
@@ -89,7 +101,9 @@ useEffect(()=>{
         .finally(()=> setIsLoadinng(false));
     }
 
-
+    const nameChange = e =>{
+        setProfileName(e.target.value)
+      }
 
     return {
         user,
@@ -97,6 +111,8 @@ useEffect(()=>{
         password,
         emailChange,
         passChange,
+        profileName,
+        nameChange,
         error,
         handleRegistration,
         handleLogin,

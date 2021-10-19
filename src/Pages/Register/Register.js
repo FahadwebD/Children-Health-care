@@ -1,14 +1,24 @@
 import React from 'react';
-import { Link , useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link , useHistory  , useLocation} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 import './Register.css'
 const Register = () => {
-  const { email ,password,emailChange,passChange,handleRegistration , error} = useAuth()
- 
+  const { email ,password, profileName , nameChange ,emailChange,passChange,handleRegistration , signInUsingGoogle ,  error} = useAuth()
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || '/home';
     
-    
-  
+  const handleGoogleSignin = () => {
+
+
+    signInUsingGoogle()
+    .then(result => {
+      history.push(redirect_uri);
+    })
+  }
+  console.log(email , password , profileName )
     return (
         <div>
                  <div>
@@ -23,13 +33,17 @@ const Register = () => {
 
   
     <form onSubmit={handleRegistration}>
-      <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
+      <input onChange={nameChange} type="text" placeholder='name' />
+      <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="email"/>
       <input onChange={passChange} type="password" id="login" className="fadeIn third" name="login" placeholder="password"/>
       <div><small className='text-danger'>{error}</small></div>
       <input  type="submit" className="fadeIn fourth" value="Register"/>
      
     </form>
 
+    <div className='mb-2'>
+      <Button onClick={handleGoogleSignin} className='px-5 fadeIn fourth' style={{backgroundColor:'#58baed' , border:"none"}}>Google</Button>
+      </div>
    
     <div id="formFooter">
       <Link className="underlineHover" to="/login">Already Have An Account?</Link>

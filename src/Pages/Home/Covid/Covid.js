@@ -12,49 +12,25 @@ const Covid = () => {
   <Accordion.Item eventKey="0">
     <Accordion.Header>COVID-19: What You Need to Know</Accordion.Header>
     <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+    COVID-19 is an infectious respiratory illness caused by a newly discovered coronavirus called SARS-CoV-2. ‘CO’ stands for corona, ‘VI’ for virus, and ‘D’ for disease.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
     <Accordion.Header>Offering COVID-19 Testing on a Case-By-Case Basis</Accordion.Header>
     <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+    There are many COVID-19 testing sites throughout Atlanta offering testing to children. Your pediatrician may also have access to testing.In collaboration with Emory University, Atlanta Public Schools (APS) and Viral Solutions, Children’s offers testing that also contributes to research through the National Institutes of Health (NIH) RADx Program. This pediatric-friendly site is open to the general public and provides testing for kids and adults who are symptomatic or have been exposed to COVID‐19.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
     <Accordion.Header>Steps We're Taking to Keep Your Family Safe</Accordion.Header>
     <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+    At Children’s Healthcare of Atlanta, we know how important it is to be able to trust the people who care for your family. That’s why we’re taking every precaution to help make sure you feel safe bringing your family to our facilities during the COVID-19 pandemic. Providing safe, specialized care for kids is what we do.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
     <Accordion.Header>COVID-19 Vaccines</Accordion.Header>
     <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+    We know that you have many questions about the COVID-19 vaccines and when they will be available to children. Our team is here to help.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

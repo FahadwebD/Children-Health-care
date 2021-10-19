@@ -15,8 +15,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>Wait Times</h3>
+      <p>We are experiencing high volumes, which has led to increased wait times. Thank you for your patience.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -27,8 +27,10 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3>Come to Work Where Your Work Matters More</h3>
+      <p>When your work makes a difference in others’ lives, it can change your life, too. We are recruiting caring, talented people to join us in our mission to make kids healthier today and better tomorrow.
+
+.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -39,8 +41,8 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>Does Your Child Need a COVID-19 Test?</h3>
+      <p>If your child has no or mild symptoms, or just needs a test, go to a community testing site..</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -51,8 +53,8 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3 >Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3 >Come to Work Where Your Work Matters More</h3>
+      <p>We have Georgia’s only nationally ranked orthopedics and sports medicine program for kids and teens. See why pediatric care is the best option for your athlete.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

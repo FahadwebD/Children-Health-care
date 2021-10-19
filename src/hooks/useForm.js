@@ -4,7 +4,7 @@ const useForm =()=>{
 
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
-  
+    
 
    
       const emailChange = e =>{
@@ -15,13 +15,16 @@ const useForm =()=>{
       const passChange = e =>{
         setPassword(e.target.value)
       }
+     
 
 
       return [
           email ,
           password,
+        
           emailChange,
-          passChange
+          passChange,
+         
       ]
 
 }

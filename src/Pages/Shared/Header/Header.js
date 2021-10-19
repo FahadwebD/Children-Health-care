@@ -18,7 +18,7 @@ const Header = () => {
       <Nav.Link as={Link}  to="/donates">Donate</Nav.Link>
     </Nav>
     </Navbar.Collapse>
-    <Navbar.Text className='me-2'>{user?.email}</Navbar.Text>
+    <Navbar.Text className='me-2'>{user?.displayName}</Navbar.Text>
    {user?.email ?
    <Button onClick={logOut} style={{backgroundColor:'#58baed' , border:"none"}}>Logout</Button>:<Nav.Link as={Link} to="/login"><Button style={{backgroundColor:'#58baed' , border:"none"}}>Login</Button></Nav.Link>}
     

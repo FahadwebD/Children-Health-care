@@ -38,7 +38,7 @@ const Login = () => {
 
   
     <form  onSubmit={handleLogin}>
-      <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
+      <input onChange={emailChange} type="text" id="login" className="fadeIn second" name="login" placeholder="email"/>
       <input onChange={passChange} type="password" id="login" className="fadeIn third" name="login" placeholder="password"/>
       <input  type="submit" className="fadeIn fourth" value="Log In"/>
      
