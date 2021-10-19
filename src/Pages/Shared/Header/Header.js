@@ -9,7 +9,7 @@ const Header = () => {
         <>
             <Navbar sticky="top" style={{backgroundColor:'#4671c6'}} variant="dark" expand="lg">
     <Container>
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home">Children Care</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
     <Nav className="me-auto">
