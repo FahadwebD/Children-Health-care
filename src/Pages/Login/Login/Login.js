@@ -8,13 +8,13 @@ import './Login.css'
 const Login = () => {
  
     
-    const { email ,password,emailChange,passChange,handleLogin, signInUsingGoogle} = useAuth();
+    const { email ,password,emailChange,passChange,handleLogin, signInUsingGoogle ,error} = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
+    console.log(error)
+    const errorDetect =(error == 'Firebase: Error (auth/invalid-email).')?'invalid Email':(error == 'Firebase: Error (auth/wrong-password).')?'password wrong':(error == 'Firebase: Error (auth/user-not-found).')?'user not found':(error == 'Firebase: Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later. (auth/too-many-requests).')?'account temporary disable due to many request':''
 
-    
-    
     const handleGoogleSignin = () => {
 
 
@@ -43,6 +43,8 @@ const Login = () => {
       <input  type="submit" className="fadeIn fourth" value="Log In"/>
      
     </form>
+    
+    <p style={{color:'red'}}>{errorDetect}</p>
 
     <div className='mb-2'>
       <Button onClick={handleGoogleSignin} className='px-5 fadeIn fourth' style={{backgroundColor:'#58baed' , border:"none"}}>Google</Button>

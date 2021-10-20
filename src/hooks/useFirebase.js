@@ -47,6 +47,7 @@ const useFirebase = () =>{
             .then(result=>{
                 setUser(auth.currentUser)
             })
+            
 
           }
     
